@@ -3,358 +3,285 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>بوابة البحث العلمي الذكية</title>
+
+<title>بوابة الباحث العربي</title>
 
 <style>
-:root{
- --primary:#0f4c81;
- --secondary:#1e88e5;
- --bg:#f3f8ff;
-}
-
-*{
+body{
+font-family:'Tahoma',sans-serif;
 margin:0;
 padding:0;
-box-sizing:border-box;
-font-family:"Segoe UI",Tahoma,sans-serif;
-}
-
-body{
 background:
-radial-gradient(circle at top right,#dbeafe 0%,transparent 30%),
-radial-gradient(circle at bottom left,#bfdbfe 0%,transparent 35%),
-linear-gradient(135deg,#f8fbff,#eef6ff);
-min-height:100vh;
+linear-gradient(rgba(248,250,252,.97), rgba(248,250,252,.97)),
+url('https://www.transparenttextures.com/patterns/arabesque.png');
 }
 
 header{
-text-align:center;
-padding:50px 20px;
+background:linear-gradient(135deg,#0f766e,#14532d);
 color:white;
-background:linear-gradient(135deg,#0f4c81,#1e88e5);
-box-shadow:0 4px 20px rgba(0,0,0,.15);
+padding:40px;
+text-align:center;
 }
 
 header h1{
+margin:0;
 font-size:40px;
-margin-bottom:10px;
 }
 
 header p{
 font-size:18px;
-max-width:800px;
-margin:auto;
 }
 
-.motivation{
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-padding:25px;
-}
-
-.quote{
-background:white;
-padding:15px 20px;
-border-radius:15px;
-box-shadow:0 3px 10px rgba(0,0,0,.08);
-font-weight:bold;
-color:#0f4c81;
-}
-
-.controls{
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
+.search-container{
 padding:20px;
+text-align:center;
 }
 
 input,select{
 padding:12px;
+width:300px;
+max-width:90%;
+margin:5px;
 border-radius:10px;
 border:1px solid #ccc;
 font-size:16px;
-min-width:280px;
+}
+
+.quotes{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
+padding:20px;
+}
+
+.quote{
+background:#fff;
+padding:12px 20px;
+border-radius:12px;
+box-shadow:0 3px 8px rgba(0,0,0,.1);
+color:#0f766e;
+font-weight:bold;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fill,minmax(340px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:20px;
 padding:30px;
 }
 
 .card{
 background:white;
-border-radius:20px;
+border-radius:18px;
 padding:20px;
-box-shadow:0 3px 12px rgba(0,0,0,.08);
+box-shadow:0 5px 15px rgba(0,0,0,.1);
 transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
-}
-
-.card h3{
-color:#0f4c81;
-margin-bottom:12px;
-}
-
-.links a{
-display:flex;
-align-items:center;
-justify-content:space-between;
-margin:8px 0;
-padding:10px;
-background:#f4f9ff;
-border-radius:10px;
-text-decoration:none;
-color:#222;
-transition:.3s;
-}
-
-.links a:hover{
-background:#dceeff;
+transform:translateY(-6px);
 }
 
 .logo{
+font-size:50px;
+text-align:center;
+}
+
+.title{
 font-size:24px;
+text-align:center;
+font-weight:bold;
+color:#14532d;
+margin:10px 0;
+}
+
+.desc{
+line-height:1.8;
+color:#444;
+}
+
+.category{
+display:inline-block;
+background:#d1fae5;
+padding:5px 10px;
+border-radius:20px;
+margin-top:10px;
+font-size:14px;
+}
+
+.btn{
+display:block;
+text-align:center;
+margin-top:15px;
+background:#0f766e;
+color:white;
+padding:12px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.btn:hover{
+background:#115e59;
 }
 
 footer{
-margin-top:40px;
-background:#0f4c81;
+margin-top:30px;
+background:#14532d;
 color:white;
 text-align:center;
-padding:25px;
+padding:20px;
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>📚 بوابة البحث العلمي الذكية</h1>
-<p>
-ابدأ رحلتك البحثية من مصادر موثوقة ومعتمدة عالمياً.
-كل قاعدة معلومات تقودك مباشرة إلى الأبحاث والمراجع العلمية الأصلية.
-</p>
+<h1>📚 بوابة الباحث العربي</h1>
+<p>دليل قواعد المعلومات العربية الأكاديمية والبحثية</p>
 </header>
 
-<div class="motivation">
-<div class="quote">🚀 الباحث المتميز يبدأ من مصدر موثوق</div>
-<div class="quote">📖 كل ورقة علمية تقرؤها تزيد خبرتك</div>
-<div class="quote">🎓 المعرفة تبدأ بسؤال جيد</div>
-<div class="quote">🔬 ابحث بعمق لتصنع أثراً</div>
+<div class="quotes">
+<div class="quote">🌱 المعرفة تنمو بالقراءة المستمرة</div>
+<div class="quote">🔍 ابحث أولاً ثم كوّن رأيك</div>
+<div class="quote">🏆 الباحث المتميز يعتمد على المصادر الموثوقة</div>
+<div class="quote">📖 كل بحث تبدأه يفتح لك آفاقاً جديدة</div>
 </div>
 
-<div class="controls">
-<input type="text" id="search" placeholder="ابحث عن تخصص أو قاعدة معلومات">
+<div class="search-container">
+<input type="text" id="search" placeholder="ابحث عن قاعدة معلومات...">
+
 <select id="filter">
-<option value="all">جميع التخصصات</option>
-<option>الهندسة</option>
-<option>الحاسب والذكاء الاصطناعي</option>
-<option>الطب</option>
-<option>إدارة الأعمال</option>
-<option>القانون</option>
-<option>التربية</option>
-<option>علم النفس</option>
-<option>العلوم الأساسية</option>
-<option>متعددة التخصصات</option>
+<option value="الكل">جميع المجالات</option>
+<option value="متعددة التخصصات">متعددة التخصصات</option>
+<option value="التربية">التربية</option>
+<option value="التراث الإسلامي">التراث الإسلامي</option>
+<option value="الاستشهادات">الاستشهادات</option>
+<option value="المكتبات الرقمية">المكتبات الرقمية</option>
 </select>
 </div>
 
 <div class="grid" id="cards">
 
-<div class="card" data-category="الهندسة">
-<h3>⚙️ الهندسة</h3>
-<div class="links">
-<a href="https://ieeexplore.ieee.org" target="_blank">
-<span>IEEE Xplore</span>
-<span class="logo">⚡</span>
-</a>
-<a href="https://www.engineeringvillage.com" target="_blank">
-<span>Engineering Village</span>
-<span class="logo">🏗️</span>
-</a>
-<a href="https://ascelibrary.org" target="_blank">
-<span>ASCE Library</span>
-<span class="logo">🌉</span>
-</a>
+<div class="card" data-category="متعددة التخصصات">
+<div class="logo">📚</div>
+<div class="title">المنهل</div>
+<div class="desc">
+منصة أكاديمية عربية توفر الكتب الإلكترونية والدوريات العلمية والرسائل الجامعية والبحوث.
 </div>
-</div>
-
-<div class="card" data-category="الحاسب والذكاء الاصطناعي">
-<h3>💻 الحاسب والذكاء الاصطناعي</h3>
-<div class="links">
-<a href="https://dl.acm.org" target="_blank">
-<span>ACM Digital Library</span>
-<span class="logo">🤖</span>
+<div class="category">متعددة التخصصات</div>
+<a class="btn" href="https://www.almanhal.com" target="_blank">
+زيارة المنهل
 </a>
-<a href="https://arxiv.org" target="_blank">
-<span>arXiv</span>
-<span class="logo">🧠</span>
-</a>
-<a href="https://dblp.org" target="_blank">
-<span>DBLP</span>
-<span class="logo">💾</span>
-</a>
-</div>
-</div>
-
-<div class="card" data-category="الطب">
-<h3>🏥 الطب والعلوم الصحية</h3>
-<div class="links">
-<a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank">
-<span>PubMed</span>
-<span class="logo">🩺</span>
-</a>
-<a href="https://www.cochranelibrary.com" target="_blank">
-<span>Cochrane Library</span>
-<span class="logo">💊</span>
-</a>
-<a href="https://www.embase.com" target="_blank">
-<span>Embase</span>
-<span class="logo">🧬</span>
-</a>
-</div>
-</div>
-
-<div class="card" data-category="العلوم الأساسية">
-<h3>🔬 العلوم الأساسية</h3>
-<div class="links">
-<a href="https://mathscinet.ams.org" target="_blank">
-<span>MathSciNet</span>
-<span class="logo">➗</span>
-</a>
-<a href="https://zbmath.org" target="_blank">
-<span>zbMATH</span>
-<span class="logo">📐</span>
-</a>
-<a href="https://pubs.acs.org" target="_blank">
-<span>ACS Publications</span>
-<span class="logo">⚗️</span>
-</a>
-</div>
-</div>
-
-<div class="card" data-category="إدارة الأعمال">
-<h3>📈 إدارة الأعمال</h3>
-<div class="links">
-<a href="https://www.emerald.com/insight/" target="_blank">
-<span>Emerald Insight</span>
-<span class="logo">💼</span>
-</a>
-<a href="https://www.proquest.com" target="_blank">
-<span>ABI/INFORM</span>
-<span class="logo">📊</span>
-</a>
-<a href="https://www.ebsco.com" target="_blank">
-<span>Business Source</span>
-<span class="logo">🏢</span>
-</a>
-</div>
-</div>
-
-<div class="card" data-category="القانون">
-<h3>⚖️ القانون</h3>
-<div class="links">
-<a href="https://home.heinonline.org" target="_blank">
-<span>HeinOnline</span>
-<span class="logo">📜</span>
-</a>
-<a href="https://www.lexisnexis.com" target="_blank">
-<span>LexisNexis</span>
-<span class="logo">🏛️</span>
-</a>
-</div>
-</div>
-
-<div class="card" data-category="التربية">
-<h3>🎓 التربية</h3>
-<div class="links">
-<a href="https://eric.ed.gov" target="_blank">
-<span>ERIC</span>
-<span class="logo">📚</span>
-</a>
-<a href="https://www.ebsco.com" target="_blank">
-<span>Education Source</span>
-<span class="logo">📝</span>
-</a>
-</div>
-</div>
-
-<div class="card" data-category="علم النفس">
-<h3>🧠 علم النفس</h3>
-<div class="links">
-<a href="https://www.apa.org/pubs/databases/psycinfo" target="_blank">
-<span>PsycINFO</span>
-<span class="logo">😊</span>
-</a>
-<a href="https://www.apa.org/pubs/databases/psycarticles" target="_blank">
-<span>PsycArticles</span>
-<span class="logo">💭</span>
-</a>
-</div>
 </div>
 
 <div class="card" data-category="متعددة التخصصات">
-<h3>🌍 قواعد متعددة التخصصات</h3>
-<div class="links">
-<a href="https://scholar.google.com" target="_blank">
-<span>Google Scholar</span>
-<span class="logo">🔎</span>
-</a>
-<a href="https://www.scopus.com" target="_blank">
-<span>Scopus</span>
-<span class="logo">⭐</span>
-</a>
-<a href="https://www.webofscience.com" target="_blank">
-<span>Web of Science</span>
-<span class="logo">🌐</span>
-</a>
-<a href="https://www.sciencedirect.com" target="_blank">
-<span>ScienceDirect</span>
-<span class="logo">📘</span>
-</a>
-<a href="https://link.springer.com" target="_blank">
-<span>SpringerLink</span>
-<span class="logo">📗</span>
+<div class="logo">📰</div>
+<div class="title">أسك زاد</div>
+<div class="desc">
+منصة عربية تضم كتباً ودوريات وصحفاً وبحوثاً في مجالات متعددة.
+</div>
+<div class="category">متعددة التخصصات</div>
+<a class="btn" href="https://www.askzad.com" target="_blank">
+زيارة أسك زاد
 </a>
 </div>
+
+<div class="card" data-category="التربية">
+<div class="logo">🎓</div>
+<div class="title">شمعة</div>
+<div class="desc">
+قاعدة معلومات عربية متخصصة في الدراسات والبحوث التربوية.
+</div>
+<div class="category">التربية</div>
+<a class="btn" href="https://www.shamaa.org" target="_blank">
+زيارة شمعة
+</a>
+</div>
+
+<div class="card" data-category="متعددة التخصصات">
+<div class="logo">💻</div>
+<div class="title">معرفة</div>
+<div class="desc">
+منصة وقواعد معلومات عربية أكاديمية متعددة التخصصات.
+</div>
+<div class="category">متعددة التخصصات</div>
+<a class="btn" href="https://search.emarefa.net" target="_blank">
+زيارة معرفة
+</a>
+</div>
+
+<div class="card" data-category="الاستشهادات">
+<div class="logo">📈</div>
+<div class="title">أرسيف ARCIF</div>
+<div class="desc">
+معامل التأثير والاستشهادات المرجعية للمجلات العلمية العربية.
+</div>
+<div class="category">الاستشهادات</div>
+<a class="btn" href="https://arcif.org" target="_blank">
+زيارة أرسيف
+</a>
+</div>
+
+<div class="card" data-category="التراث الإسلامي">
+<div class="logo">🕌</div>
+<div class="title">ميم</div>
+<div class="desc">
+قاعدة معلومات متخصصة في التراث الإسلامي والعربي.
+</div>
+<div class="category">التراث الإسلامي</div>
+<a class="btn" href="#">
+زيارة ميم
+</a>
+</div>
+
+<div class="card" data-category="المكتبات الرقمية">
+<div class="logo">🏛️</div>
+<div class="title">الجامع الكبير</div>
+<div class="desc">
+مكتبة رقمية عربية شاملة تضم محتوى معرفياً في مختلف العلوم.
+</div>
+<div class="category">المكتبات الرقمية</div>
+<a class="btn" href="#">
+زيارة الجامع الكبير
+</a>
 </div>
 
 </div>
 
 <footer>
-⭐ ابحث من المصادر الأصلية دائماً، فالباحث الناجح يبني معرفته على الأدلة العلمية الموثوقة.
+بوابة الباحث العربي © الوصول إلى المعرفة يبدأ من المصدر الصحيح
 </footer>
 
 <script>
 const search=document.getElementById("search");
 const filter=document.getElementById("filter");
-const cards=document.querySelectorAll(".card");
 
-function updateFilter(){
-const q=search.value.toLowerCase();
-const f=filter.value;
+function applyFilters(){
 
-cards.forEach(card=>{
-const txt=card.innerText.toLowerCase();
-const category=card.dataset.category;
+const text=search.value.toLowerCase();
+const category=filter.value;
 
-const matchText=txt.includes(q);
-const matchCategory=(f==="all" || category===f);
+document.querySelectorAll(".card").forEach(card=>{
 
-card.style.display=(matchText && matchCategory)
-?"block":"none";
+const matchText=card.innerText.toLowerCase().includes(text);
+
+const matchCategory=
+category==="الكل" ||
+card.dataset.category===category;
+
+card.style.display=
+(matchText && matchCategory)
+? "block"
+: "none";
+
 });
 }
 
-search.addEventListener("keyup",updateFilter);
-filter.addEventListener("change",updateFilter);
+search.addEventListener("keyup",applyFilters);
+filter.addEventListener("change",applyFilters);
 </script>
 
 </body>
